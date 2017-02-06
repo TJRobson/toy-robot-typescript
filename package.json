@@ -8,11 +8,6 @@
   "keywords": [
     ""
   ],
-  "files": [
-    "lib"
-  ],
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
   "scripts": {
     "clean": "rimraf lib .nyc-output coverage",
     "lint": "tslint --force --fix \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -29,9 +24,19 @@
     "prestart": "yarn build",
     "start": "node ./lib/main"
   },
-  "dependencies": {},
+  "files": [
+    "lib"
+  ],
+  "main": "lib/main.js",
+  "bin": {
+    "toy-robot": "./lib/main.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
   "devDependencies": {
     "@types/chai": "^3.4.34",
+    "@types/lodash": "^4.14.52",
     "@types/mocha": "^2.2.38",
     "@types/node": "^7.0.4",
     "@types/sinon-chai": "^2.7.27",
