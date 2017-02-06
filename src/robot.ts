@@ -1,5 +1,6 @@
 import { IPosition } from './table-top';
 
+// By using a Enum means that the toString function gives a number. Need to fix.
 export const enum Directions {
   'NORTH',
   'EAST',
@@ -14,7 +15,7 @@ export interface IRobotOptions {
 
 export default class Robot {
 
-  public name: string;
+//   public name: string; not being used, why didn't tslint pick that up?
   public direction: Directions;
   private position: IPosition;
 

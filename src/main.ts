@@ -10,7 +10,7 @@ const controller = new Controller(table);
 const rlOptions: ReadLineOptions = {
     input: process.stdin,
     output: process.stdout,
-    terminal: false,
+    // terminal: false, Not sure if this matters.
 };
 
 process.stdout.write('Valid commands: PLACE, LEFT, RIGHT, MOVE, REPORT.\n');
